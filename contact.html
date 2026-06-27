@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | EPREL Services Nigeria Ltd.</title>
+    <style>
+        /* ========================================================
+           EPREL BRAND DESIGN SYSTEM
+           Primary Hue: Deep Royal Purple (#3b174e)
+           Accent Highlights: Metallic Gold (#d4af37)
+           Canvas Base: Soft Silk White (#fcfbfa)
+        ======================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #fcfbfa;
+            color: #2b2b2b;
+            width: 100%;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* 1. INTRO / HEADER STRIP */
+        .page-intro-banner {
+            width: 100%;
+            background: linear-gradient(rgba(59, 23, 78, 0.9), rgba(23, 9, 31, 0.95)), 
+                        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200') no-repeat center center/cover;
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        .intro-title {
+            color: #f5f0e1;
+            font-size: 38px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .intro-subtitle {
+            color: #d4af37;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: sans-serif;
+        }
+
+        /* 2. DUAL-COLUMN CONTACT LAYOUT SYSTEM */
+        .contact-grid-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            display: flex;
+            gap: 50px;
+        }
+
+        /* Column 1: Info Desk Links Panel */
+        .contact-info-pane {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .info-card {
+            background: #ffffff;
+            border: 1px solid rgba(59, 23, 78, 0.06);
+            border-radius: 6px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.01);
+        }
+
+        .info-card h3 {
+            color: #3b174e;
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-card p {
+            font-family: sans-serif;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* Instant Link Treatments */
+        .contact-action-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .wa-link { color: #25D366; }
+        .wa-link:hover { color: #1ea851; }
+        
+        .fb-link { color: #1877F2; }
+        .fb-link:hover { color: #145dbf; }
+
+        /* Column 2: Gmail Form Portal Box */
+        .contact-form-pane {
+            flex: 1.2;
+            background: #ffffff;
+            border: 1px solid rgba(59, 23, 78, 0.06);
+            border-radius: 6px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .form-heading {
+            color: #3b174e;
+            font-size: 22px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #3b174e;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .form-control-input, .form-control-textarea {
+            width: 100%;
+            padding: 12px 14px;
+            font-family: sans-serif;
+            font-size: 14px;
+            background-color: #fdfcfb;
+            border: 2px solid rgba(59, 23, 78, 0.12);
+            border-radius: 4px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control-input:focus, .form-control-textarea:focus {
+            border-color: #d4af37;
+        }
+
+        .form-control-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit-btn {
+            background-color: #3b174e;
+            color: #f5f0e1;
+            border: 2px solid #3b174e;
+            padding: 14px 28px;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-submit-btn:hover {
+            background-color: #d4af37;
+            border-color: #d4af37;
+            color: #3b174e;
+        }
+
+        /* ========================================================
+           RESPONSIVE OVERFLOW CLEANUP BOUNDARIES
+        ======================================================== */
+        @media (max-width: 868px) {
+            .contact-grid-container {
+                flex-direction: column;
+                padding: 40px 20px;
+                gap: 40px;
+            }
+            .contact-form-pane { padding: 25px 20px; }
+            .intro-title { font-size: 28px; }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="main-header"></div>
+
+
+    <section class="page-intro-banner">
+        <h1 class="intro-title">Connect With Us</h1>
+        <p class="intro-subtitle">Get in touch instantly with our management channels</p>
+    </section>
+
+
+    <main class="contact-grid-container">
+
+        <div class="contact-info-pane">
+            
+            <div class="info-card">
+                <h3>WhatsApp Desk</h3>
+                <p>Chat directly with our team for instant custom pricing, design inquiries, and order tracking support updates.</p>
+                <a href="https://wa.me/2348060838387" target="_blank" class="contact-action-link wa-link">
+                    💬 Chat on WhatsApp (08060838387)
+                </a>
+            </div>
+
+            <div class="info-card">
+                <h3>Social Channels</h3>
+                <p>Follow our official Facebook page to view our design lookbooks, behind-the-scenes fittings, and styling programs.</p>
+                <a href="https://www.facebook.com/BNTCCOUTURE/" target="_blank" class="contact-action-link fb-link">
+                    👍 Follow Our Facebook Page
+                </a>
+            </div>
+
+        </div>
+
+        <div class="contact-form-pane">
+            <h2 class="form-heading">Send Email Message</h2>
+            
+            <form action="https://formspree.io/f/lebechukwublessingcc@gmail.com" method="POST">
+                
+                <div class="form-group">
+                    <label for="client-name">Full Name</label>
+                    <input type="text" id="client-name" name="name" class="form-control-input" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="client-email">Email Address</label>
+                    <input type="email" id="client-email" name="email" class="form-control-input" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="client-message">Your Message</label>
+                    <textarea id="client-message" name="message" class="form-control-textarea" placeholder="Detail your service requirements or question here..." required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit-btn">Send Inquiry Email</button>
+
+            </form>
+        </div>
+
+    </main>
+
+
+    <div id="main-footer"></div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // 1. AUTOMATED MASTER HEADER ASSET LOADER
+            fetch('header.html')
+                .then(response => { if (!response.ok) throw new Error("Header asset file missing"); return response.text(); })
+                .then(headerHtmlData => {
+                    document.getElementById('main-header').innerHTML = headerHtmlData;
+                    
+                    // Activate Mobile Responsive Menu Toggle Events instantly inside injected context
+                    const mobileToggle = document.getElementById('mobile-menu-toggle');
+                    const mainNav = document.getElementById('main-nav');
+                    const mobileLinks = document.querySelectorAll('.mobile-only-link');
+
+                    function checkResponsiveLayout() {
+                        if (window.innerWidth <= 992) {
+                            if(mobileLinks) mobileLinks.forEach(link => link.style.display = "block");
+                        } else {
+                            if(mobileLinks) mobileLinks.forEach(link => link.style.display = "none");
+                            if(mainNav) mainNav.classList.remove('active');
+                        }
+                    }
+
+                    if(mobileToggle && mainNav) {
+                        mobileToggle.addEventListener('click', () => mainNav.classList.toggle('active'));
+                    }
+
+                    window.addEventListener('resize', checkResponsiveLayout);
+                    checkResponsiveLayout(); 
+                })
+                .catch(err => console.error('Error handling header injection operations:', err));
+
+
+            // 2. AUTOMATED MASTER FOOTER ASSET LOADER
+            fetch('footer.html')
+                .then(response => { if (!response.ok) throw new Error("Footer asset file missing"); return response.text(); })
+                .then(footerHtmlData => {
+                    document.getElementById('main-footer').innerHTML = footerHtmlData;
+                })
+                .catch(err => console.error('Error handling footer injection operations:', err));
+
+        });
+    </script>
+</body>
+      </html>
