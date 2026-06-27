@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPREL Services Nigeria Ltd. | Luxury Fashion, Bridal & Elite Catering</title>
+    <style>
+        /* ========================================================
+           EPREL FASHION COMPONENT BRANDING
+           Primary Elegance: Deep Royal Purple (#3b174e)
+           Accent Highlights: Metallic Gold (#d4af37)
+           Background Canvas: Soft Silk White (#fcfbfa)
+        ======================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #fcfbfa;
+            color: #2b2b2b;
+            width: 100%;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ========================================================
+           HEADER STYLES INSIDE INDEX.HTML
+        ======================================================== */
+        .site-header {
+            width: 100%;
+            background-color: #3b174e;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1000;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        .header-top-bar {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 8px 20px;
+        }
+
+        .top-bar-content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .top-bar-links a {
+            color: #bfa3ce;
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .top-bar-links a:hover { color: #d4af37; }
+        .social-badge-fb { color: #4267B2 !important; font-weight: bold; }
+        .social-badge-wa { color: #25D366 !important; font-weight: bold; }
+
+        .header-main-bar {
+            width: 100%;
+            padding: 15px 20px;
+        }
+
+        .main-bar-content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo-container { flex: 0 0 auto; }
+        .brand-logo-img { max-height: 55px; display: block; width: auto; }
+
+        .main-nav { display: flex; align-items: center; }
+        .nav-list { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; align-items: center; }
+
+        .nav-list a {
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #f5f0e1;
+            padding: 8px 4px;
+            display: block;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-list a:hover { color: #d4af37; }
+
+        .nav-list a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #d4af37;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        .nav-list a:hover::after { width: 90%; }
+
+        .cta-bootcamp-btn a {
+            background-color: #d4af37;
+            color: #3b174e !important;
+            padding: 10px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        .cta-bootcamp-btn a::after { display: none !important; }
+
+        .cta-bootcamp-btn a:hover {
+            background-color: #f5f0e1;
+            color: #3b174e;
+            transform: scale(1.05);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            width: 26px;
+            height: 3px;
+            background-color: #d4af37;
+            margin-bottom: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* ========================================================
+           HERO & CONTENT STYLES
+        ======================================================== */
+        .hero-section {
+            width: 100%;
+            min-height: 80vh;
+            background: linear-gradient(rgba(59, 23, 78, 0.85), rgba(23, 9, 31, 0.95)), 
+                        url('https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=1600') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 4px solid #d4af37;
+        }
+
+        .hero-content { max-width: 800px; width: 100%; }
+        .hero-badge { color: #d4af37; text-transform: uppercase; font-size: 14px; letter-spacing: 3px; margin-bottom: 15px; font-weight: 600; display: inline-block; }
+        .hero-title { color: #f5f0e1; font-size: 48px; font-weight: 700; margin-bottom: 20px; letter-spacing: 1px; }
+        .hero-description { color: #dcd1e4; font-size: 18px; margin-bottom: 35px; font-family: sans-serif; }
+        
+        .hero-btn-group { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary {
+            background-color: #d4af37;
+            color: #3b174e;
+            text-decoration: none;
+            padding: 14px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .btn-primary:hover { background-color: #f5f0e1; transform: translateY(-3px); }
+
+        .btn-secondary {
+            border: 2px solid #d4af37;
+            color: #d4af37;
+            text-decoration: none;
+            padding: 12px 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover { background: rgba(212, 175, 55, 0.1); color: #f5f0e1; }
+
+        .services-section { width: 100%; padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-title { font-size: 36px; color: #3b174e; position: relative; display: inline-block; padding-bottom: 15px; }
+        .section-title::after { content: ''; position: absolute; width: 60px; height: 3px; background-color: #d4af37; bottom: 0; left: 50%; transform: translateX(-50%); }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; justify-content: center; }
+        .service-card { background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid rgba(59, 23, 78, 0.05); transition: transform 0.3s ease; }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-img-frame { width: 100%; height: 250px; background-color: #eee; overflow: hidden; }
+        .service-img-frame img { width: 100%; height: 100%; object-fit: cover; }
+        .service-details { padding: 25px; }
+        .service-tag { color: #d4af37; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .service-name { color: #3b174e; font-size: 22px; margin-bottom: 12px; }
+        .service-text { color: #666; font-size: 14px; margin-bottom: 20px; font-family: sans-serif; }
+
+        .showcase-section { background-color: #3b174e; color: #f5f0e1; padding: 80px 20px; width: 100%; }
+        .showcase-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .showcase-item { position: relative; border: 2px solid rgba(212, 175, 55, 0.3); border-radius: 4px; overflow: hidden; height: 350px; }
+        .showcase-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .showcase-item:hover img { transform: scale(1.1); }
+        .showcase-overlay { position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(transparent, rgba(0,0,0,0.85)); padding: 20px; text-align: center; }
+
+        .mission-strip { background-color: #17091f; border-top: 2px solid #d4af37; padding: 60px 20px; text-align: center; color: #f5f0e1; }
+        .mission-box { max-width: 700px; margin: 0 auto; }
+        .mission-quote { font-size: 22px; font-style: italic; color: #d4af37; margin-bottom: 15px; }
+
+        /* ========================================================
+           RESPONSIVE BREAKPOINT RULES
+        ======================================================== */
+        @media (max-width: 992px) {
+            .header-top-bar { display: none; }
+            .mobile-menu-toggle { display: block; }
+            .main-nav {
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #3b174e;
+                border-top: 2px solid #d4af37;
+                padding: 15px 0;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.4);
+            }
+            .main-nav.active { display: flex; }
+            .nav-list { flex-direction: column; width: 100%; gap: 0; }
+            .nav-list li { width: 100%; text-align: center; }
+            .nav-list a { padding: 14px; border-bottom: 1px solid rgba(212, 175, 55, 0.15); font-size: 15px; }
+            .nav-list a::after { display: none; }
+            .cta-bootcamp-btn a { border-radius: 0; background-color: #d4af37; color: #3b174e !important; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 32px; }
+            .hero-description { font-size: 15px; }
+            .section-title { font-size: 28px; }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-top-bar">
+            <div class="top-bar-content">
+                <ul class="top-bar-links">
+                    <li><a href="mission.html">Our Mission</a></li>
+                    <li><a href="offices.html">Our Offices</a></li>
+                </ul>
+                <ul class="top-bar-links">
+                    <li><a href="https://www.facebook.com/BNTCCOUTURE/" class="social-badge-fb" target="_blank">👍 Follow Our Facebook</a></li>
+                    <li><a href="https://wa.me/234..." class="social-badge-wa" target="_blank">💬 WhatsApp Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-main-bar">
+            <div class="main-bar-content">
+                <div class="brand-logo-container">
+                    <a href="index.html">
+                        <img src="Gemini_Generated_Image_z8it87z8it87z8it.png" alt="EPREL Logo" class="brand-logo-img">
+                    </a>
+                </div>
+
+                <nav class="main-nav" id="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="what-we-do.html">What We Do</a></li>
+                        <li><a href="ceo.html">CEO</a></li>
+                        <li><a href="delivery.html">How We Deliver</a></li>
+                        <li><a href="order.html">Place Orders</a></li>
+                        
+                        <li class="mobile-only-link" style="display:none;"><a href="mission.html">Our Mission</a></li>
+                        <li class="mobile-only-link" style="display:none;"><a href="offices.html">Our Offices</a></li>
+                        <li class="mobile-only-link" style="display:none;"><a href="https://www.facebook.com/BNTCCOUTURE/">Facebook Page</a></li>
+                        <li class="mobile-only-link" style="display:none;"><a href="https://wa.me/234...">Contact WhatsApp</a></li>
+                        
+                        <li class="cta-bootcamp-btn"><a href="bootcamp.html">Join Our Bootcamp!</a></li>
+                    </ul>
+                </nav>
+
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="hero-badge">Welcome to Pure Luxury & Elegance</span>
+            <h1 class="hero-title">EPREL SERVICES NIGERIA LTD.</h1>
+            <p class="hero-description">
+                Redefining premium bespoke tailoring, high-fashion styles, elegant bridal garments, and five-star culinary catering services for your milestones.
+            </p>
+            <div class="hero-btn-group">
+                <a href="order.html" class="btn-primary">Place An Order</a>
+                <a href="bootcamp.html" class="btn-secondary">Join Masterclass Bootcamp</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="section-header">
+            <h2 class="section-title">Our Specialized Departments</h2>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-img-frame">
+                    <img src="https://images.unsplash.com/photo-1544030096-e3b9524749af?q=80&w=600" alt="Bespoke Fashion Tailoring">
+                </div>
+                <div class="service-details">
+                    <span class="service-tag">Haute Couture</span>
+                    <h3 class="service-name">Bespoke Tailoring</h3>
+                    <p class="service-text">Custom-measured traditional, native, and contemporary male and female garments crafted to showcase elite presence and prestige.</p>
+                    <a href="order.html" class="btn-primary" style="padding: 8px 20px; font-size: 11px;">Book Fitting</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img-frame">
+                    <img src="https://images.unsplash.com/photo-1594552072238-b8a33785b261?q=80&w=600" alt="Luxury Bridal Garments">
+                </div>
+                <div class="service-details">
+                    <span class="service-tag">Weddings & Ceremonies</span>
+                    <h3 class="service-name">Bridal & Event Garments</h3>
+                    <p class="service-text">Breathtaking custom wedding gowns, reception wears, and uniform Aso-Ebi coordination designed with luxury crystals and fabric manipulations.</p>
+                    <a href="order.html" class="btn-primary" style="padding: 8px 20px; font-size: 11px;">View Portfolio</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img-frame">
+                    <img src="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=600" alt="Premium Food Catering">
+                </div>
+                <div class="service-details">
+                    <span class="service-tag">Chizzy Bites Catering</span>
+                    <h3 class="service-name">Elite Catering & Foods</h3>
+                    <p class="service-text">Professional catering services providing continental dishes, traditional delicacies, and luxury pastries for weddings and corporate events.</p>
+                    <a href="order.html" class="btn-primary" style="padding: 8px 20px; font-size: 11px;">Book Catering</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="showcase-section">
+        <div class="section-header">
+            <h2 class="section-title" style="color: #f5f0e1;">The EPREL Lookbook</h2>
+        </div>
+        <div class="showcase-grid">
+            <div class="showcase-item">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=500" alt="Fashion Design Layout">
+                <div class="showcase-overlay"><h4>Ready-To-Wear Items</h4></div>
+            </div>
+            <div class="showcase-item">
+                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=500" alt="Luxury Dinner Dress">
+                <div class="showcase-overlay"><h4>Evening Gowns</h4></div>
+            </div>
+            <div class="showcase-item">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=500" alt="Gourmet Food Catering Display">
+                <div class="showcase-overlay"><h4>Exquisite Event Catering</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="mission-strip">
+        <div class="mission-box">
+            <p class="mission-quote">"Empowerment Through Artistry & Premium Craftsmanship."</p>
+            <p style="font-family: sans-serif; font-size: 14px; color: #a590b5;">
+                Our mission is to engineer timeless custom styles and high-quality experiences that honor traditional heritage while answering the global demands of modern luxury.
+            </p>
+        </div>
+    </div>
+
+    <div id="main-footer"></div>
+
+    <script>
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        const mainNav = document.getElementById('main-nav');
+        const mobileLinks = document.querySelectorAll('.mobile-only-link');
+
+        function checkResponsiveLayout() {
+            if (window.innerWidth <= 992) {
+                mobileLinks.forEach(link => link.style.display = "block");
+            } else {
+                mobileLinks.forEach(link => link.style.display = "none");
+                mainNav.classList.remove('active');
+            }
+        }
+
+        mobileToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        window.addEventListener('resize', checkResponsiveLayout);
+        window.addEventListener('load', checkResponsiveLayout);
+    </script>
+</body>
+</html>
