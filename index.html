@@ -430,6 +430,19 @@
 
         window.addEventListener('resize', checkResponsiveLayout);
         window.addEventListener('load', checkResponsiveLayout);
-    </script>
+   // Automatically fetches and displays the footer across pages
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('main-footer').innerHTML = data;
+    })
+    .catch(err => console.error('Error handling footer component loading execution:', err));
+    // Automatically fetches and displays the footer across pages
+fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('main-header').innerHTML = data;
+    })
+    .catch(err => console.error('Error handling header component loading execution:', err));</script>
 </body>
 </html>
