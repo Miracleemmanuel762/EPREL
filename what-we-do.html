@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What We Do | EPREL Services Nigeria Ltd.</title>
+    <style>
+        /* ========================================================
+           EPREL BRAND DESIGN SYSTEM
+           Primary Hue: Deep Royal Purple (#3b174e)
+           Accent Highlights: Metallic Gold (#d4af37)
+           Canvas Base: Soft Silk White (#fcfbfa)
+        ======================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #fcfbfa;
+            color: #2b2b2b;
+            width: 100%;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* 1. INTRO / HEADER STRIP */
+        .page-intro-banner {
+            width: 100%;
+            background: linear-gradient(rgba(59, 23, 78, 0.9), rgba(23, 9, 31, 0.95)), 
+                        url('https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?q=80&w=1200') no-repeat center center/cover;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        .intro-title {
+            color: #f5f0e1;
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .intro-subtitle {
+            color: #d4af37;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: sans-serif;
+        }
+
+        /* 2. SERVICES DEEP-DIVE ARCHITECTURE */
+        .services-detail-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        /* Alternating row structure for premium layout flow */
+        .service-row {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 100px;
+        }
+
+        .service-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .service-graphic-frame {
+            flex: 1;
+            height: 450px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .service-graphic-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-row:hover .service-graphic-frame img {
+            transform: scale(1.03);
+        }
+
+        .service-text-pane {
+            flex: 1;
+        }
+
+        .dept-tag {
+            color: #d4af37;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            display: inline-block;
+            font-family: sans-serif;
+        }
+
+        .dept-title {
+            color: #3b174e;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .dept-description {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 25px;
+            font-family: sans-serif;
+            text-align: justify;
+        }
+
+        /* Feature Bullet Lists */
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            font-family: sans-serif;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .bullet-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-size: 14px;
+        }
+
+        .action-btn {
+            display: inline-block;
+            background-color: #3b174e;
+            color: #f5f0e1;
+            text-decoration: none;
+            padding: 12px 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            border: 2px solid #3b174e;
+            transition: all 0.3s ease;
+        }
+
+        .action-btn:hover {
+            background-color: transparent;
+            color: #3b174e;
+            border-color: #3b174e;
+        }
+
+        /* ========================================================
+           RESPONSIVE BREAKPOINT SAFETY BOUNDARIES
+        ======================================================== */
+        @media (max-width: 992px) {
+            .service-row, .service-row:nth-child(even) {
+                flex-direction: column;
+                gap: 30px;
+                margin-bottom: 70px;
+            }
+            .service-graphic-frame {
+                width: 100%;
+                height: 320px;
+            }
+            .intro-title { font-size: 32px; }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="main-header"></div>
+
+
+    <section class="page-intro-banner">
+        <h1 class="intro-title">What We Do</h1>
+        <p class="intro-subtitle">Crafting High-Fashion Artistry & Elite Experiences</p>
+    </section>
+
+
+    <main class="services-detail-container">
+
+        <div class="service-row">
+            <div class="service-graphic-frame">
+                <img src="https://images.unsplash.com/photo-1598554747436-c9293d6a588f?q=80&w=600" alt="Bespoke Fashion Sewing Designs">
+            </div>
+            <div class="service-text-pane">
+                <span class="dept-tag">01 / Haute Couture</span>
+                <h2 class="dept-title">Bespoke Tailoring & Luxury Sewing</h2>
+                <p class="dept-description">
+                    EPREL specializes in premium, masterfully constructed custom garments for both men and women. Drawing from high-end couture techniques, we focus on complex fabric manipulations, structure, and flawless fits to create standout styles that project confidence and absolute prestige.
+                </p>
+                <ul class="bullet-list">
+                    <li>Custom traditional wears, statement Agbada styles, and premium Senator outfits.</li>
+                    <li>Expert corsetry, luxury lace styling, and high-fashion gown silhouettes.</li>
+                    <li>Detailed, personalized fitting adjustments tailored exactly to your body blueprint.</li>
+                </ul>
+                <a href="order.html" class="action-btn">Book Custom Fitting</a>
+            </div>
+        </div>
+
+        <div class="service-row">
+            <div class="service-graphic-frame">
+                <img src="https://images.unsplash.com/photo-1591551970133-d9622bb5f7e6?q=80&w=600" alt="Luxury Bridal Gowns and Traditional Wedding Outfits">
+            </div>
+            <div class="service-text-pane">
+                <span class="dept-tag">02 / Bridal & Milestones</span>
+                <h2 class="dept-title">Elite Bridal Wear & Signature Designs</h2>
+                <p class="dept-description">
+                    For life’s most celebrated milestones, EPREL engineers breathtaking bridal pieces and statement ceremony wears. Every piece is hand-detailed to perfection, highlighting exceptional aesthetics for brides, grooms, and elite event hosts.
+                </p>
+                <ul class="bullet-list">
+                    <li>Luxury crystal-beaded and intricately patterned wedding gowns.</li>
+                    <li>Coordinated traditional wedding ensembles and glam reception dresses.</li>
+                    <li>Bespoke custom fabrics shaped into elite celebratory garments.</li>
+                </ul>
+                <a href="order.html" class="action-btn">Consult A Bridal Stylist</a>
+            </div>
+        </div>
+
+        <div class="service-row">
+            <div class="service-graphic-frame">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=600" alt="Premium Uniform Fabric Coordination">
+            </div>
+            <div class="service-text-pane">
+                <span class="dept-tag">03 / Group Branding</span>
+                <h2 class="dept-title">Aso-Ebi & Corporate Group Styling</h2>
+                <p class="dept-description">
+                    We manage large-scale garment styling and custom fabric coordination for premium events, corporate gatherings, and group showcases. EPREL ensures consistency in pattern, cut, and finishing across uniform designs without losing individual fit.
+                </p>
+                <ul class="bullet-list">
+                    <li>Custom Aso-Ebi coordination for luxury traditional ceremonies.</li>
+                    <li>Premium matching corporate and institutional uniform tailoring frameworks.</li>
+                    <li>Seamless volume design handling matching high-end couture standards.</li>
+                </ul>
+                <a href="order.html" class="action-btn">Book Group Styling</a>
+            </div>
+        </div>
+
+    </main>
+
+
+    <div id="main-footer"></div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // 1. DYNAMIC HEADER LOADER
+            fetch('header.html')
+                .then(response => {
+                    if (!response.ok) throw new Error("Header load failed");
+                    return response.text();
+                })
+                .then(headerHtmlData => {
+                    document.getElementById('main-header').innerHTML = headerHtmlData;
+                    
+                    // Activate Mobile Responsive Menu Handlers inside loaded Header
+                    const mobileToggle = document.getElementById('mobile-menu-toggle');
+                    const mainNav = document.getElementById('main-nav');
+                    const mobileLinks = document.querySelectorAll('.mobile-only-link');
+
+                    function checkResponsiveLayout() {
+                        if (window.innerWidth <= 992) {
+                            if(mobileLinks) mobileLinks.forEach(link => link.style.display = "block");
+                        } else {
+                            if(mobileLinks) mobileLinks.forEach(link => link.style.display = "none");
+                            if(mainNav) mainNav.classList.remove('active');
+                        }
+                    }
+
+                    if(mobileToggle && mainNav) {
+                        mobileToggle.addEventListener('click', () => {
+                            mainNav.classList.toggle('active');
+                        });
+                    }
+
+                    window.addEventListener('resize', checkResponsiveLayout);
+                    checkResponsiveLayout(); 
+                })
+                .catch(err => console.error('Error handling header injection:', err));
+
+
+            // 2. DYNAMIC FOOTER LOADER
+            fetch('footer.html')
+                .then(response => {
+                    if (!response.ok) throw new Error("Footer load failed");
+                    return response.text();
+                })
+                .then(footerHtmlData => {
+                    document.getElementById('main-footer').innerHTML = footerHtmlData;
+                })
+                .catch(err => console.error('Error handling footer injection:', err));
+
+        });
+    </script>
+</body>
+      </html>
