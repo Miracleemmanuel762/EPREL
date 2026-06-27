@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place an Order | EPREL Services Nigeria Ltd.</title>
+    <style>
+        /* ========================================================
+           EPREL BRAND DESIGN SYSTEM
+           Primary Hue: Deep Royal Purple (#3b174e)
+           Accent Highlights: Metallic Gold (#d4af37)
+           Canvas Base: Soft Silk White (#fcfbfa)
+        ======================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #fcfbfa;
+            color: #2b2b2b;
+            width: 100%;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* 1. INTRO / HEADER STRIP */
+        .page-intro-banner {
+            width: 100%;
+            background: linear-gradient(rgba(59, 23, 78, 0.9), rgba(23, 9, 31, 0.95)), 
+                        url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200') no-repeat center center/cover;
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        .intro-title {
+            color: #f5f0e1;
+            font-size: 38px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .intro-subtitle {
+            color: #d4af37;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: sans-serif;
+        }
+
+        /* 2. ORDERING SYSTEM PANEL ARCHITECTURE */
+        .order-section-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .order-card-panel {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(59, 23, 78, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: #3b174e;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Custom dropdown inputs matching luxury palette */
+        .form-select-input {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 15px;
+            font-family: sans-serif;
+            color: #333;
+            background-color: #fdfcfb;
+            border: 2px solid rgba(59, 23, 78, 0.15);
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            appearance: none; /* Removes native browser arrow wrapper */
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%233b174e' viewBox='0 0 16 16'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+        }
+
+        .form-select-input:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+        }
+
+        /* Dynamic Visibility Handler Class */
+        .sub-category-wrapper {
+            display: none; /* Hidden completely by default */
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* SUBMIT REDIRECT BUTTON DESIGN */
+        .submit-order-btn {
+            width: 100%;
+            background-color: #3b174e;
+            color: #f5f0e1;
+            border: 2px solid #3b174e;
+            padding: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 12px rgba(59, 23, 78, 0.15);
+        }
+
+        .submit-order-btn:hover {
+            background-color: #d4af37;
+            border-color: #d4af37;
+            color: #3b174e;
+            transform: translateY(-2px);
+        }
+
+        /* ========================================================
+           RESPONSIVE OVERFLOW CLEANUP BOUNDARIES
+        ======================================================== */
+        @media (max-width: 576px) {
+            .order-card-panel { padding: 25px 20px; }
+            .intro-title { font-size: 28px; }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="main-header"></div>
+
+
+    <section class="page-intro-banner">
+        <h1 class="intro-title">Place Your Request</h1>
+        <p class="intro-subtitle">Select your preferences to connect immediately with our desk</p>
+    </section>
+
+
+    <main class="order-section-wrapper">
+        <div class="order-card-panel">
+            <form id="eprel-order-form">
+                
+                <div class="form-group">
+                    <label for="service-category">1. Select Core Service Category</label>
+                    <select id="service-category" class="form-select-input" required>
+                        <option value="" disabled selected hidden>-- Choose an Elite Service --</option>
+                        <option value="Fashion Services">Fashion Services</option>
+                        <option value="Catering Services">Catering Services</option>
+                        <option value="Mentorship Services">Mentorship Services</option>
+                        <option value="Partnership Services">Partnership</option>
+                    </select>
+                </div>
+
+                <div id="wrapper-fashion" class="form-group sub-category-wrapper">
+                    <label for="sub-fashion">2. Choose Fashion Preferences</label>
+                    <select id="sub-fashion" class="form-select-input sub-input">
+                        <option value="" disabled selected hidden>-- Select Style/Fabric Spec --</option>
+                        <option value="Cotton Ankara">Cotton Ankara</option>
+                        <option value="Shirt gown">Shirt gown</option>
+                        <option value="Scarf inclusive">Scarf inclusive</option>
+                        <option value="Bubu gowns">Bubu gowns</option>
+                        <option value="Jalabia">Jalabia</option>
+                    </select>
+                </div>
+
+                <div id="wrapper-catering" class="form-group sub-category-wrapper">
+                    <label for="sub-catering">2. Choose Catering Preferences</label>
+                    <select id="sub-catering" class="form-select-input sub-input">
+                        <option value="" disabled selected hidden>-- Select Pastry or Menu Asset --</option>
+                        <option value="Wedding Cakes">Wedding Cakes</option>
+                        <option value="Foods">Foods</option>
+                        <option value="Flour">Flour</option>
+                    </select>
+                </div>
+
+                <div id="wrapper-mentorship" class="form-group sub-category-wrapper">
+                    <label for="sub-mentorship">2. Select Academy Curriculum</label>
+                    <select id="sub-mentorship" class="form-select-input sub-input">
+                        <option value="" disabled selected hidden>-- Select Educational Path --</option>
+                        <option value="Learn Tailoring">Learn Tailoring</option>
+                        <option value="Join the Upcoming July-September program">Join the Upcoming July-September program</option>
+                    </select>
+                </div>
+
+                <div id="wrapper-partnership" class="form-group sub-category-wrapper">
+                    <label for="sub-partnership">2. Select Partnership Target</label>
+                    <select id="sub-partnership" class="form-select-input sub-input">
+                        <option value="" disabled selected hidden>-- Select Assignment Path --</option>
+                        <option value="Become a staff">Become a staff</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-order-btn">
+                    <span>Forward Order to WhatsApp</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.964.686a.5.5 0 0 0-.65-.65L.761 4.73a.5.5 0 0 0-.016.94l5.143 2 2 5.144a.5.5 0 0 0 .94-.016l4.12-14.57zM6.354 8.146 1.83 6.39 13.391 2.61 6.354 8.146zm1.5 1.5 5.78-7.56-3.78 11.562-2-5.143z"/>
+                    </svg>
+                </button>
+
+            </form>
+        </div>
+    </main>
+
+
+    <div id="main-footer"></div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // 1. DYNAMIC COMPONENT LOADER SCRIPTS (HEADER & FOOTER ASSETS)
+            fetch('header.html')
+                .then(response => { if (!response.ok) throw new Error("Header absent"); return response.text(); })
+                .then(headerHtml => {
+                    document.getElementById('main-header').innerHTML = headerHtml;
+                    const mobileToggle = document.getElementById('mobile-menu-toggle');
+                    const mainNav = document.getElementById('main-nav');
+                    const mobileLinks = document.querySelectorAll('.mobile-only-link');
+
+                    function checkResponsiveLayout() {
+                        if (window.innerWidth <= 992) {
+                            if(mobileLinks) mobileLinks.forEach(link => link.style.display = "block");
+                        } else {
+                            if(mobileLinks) mobileLinks.forEach(link => link.style.display = "none");
+                            if(mainNav) mainNav.classList.remove('active');
+                        }
+                    }
+                    if(mobileToggle && mainNav) {
+                        mobileToggle.addEventListener('click', () => mainNav.classList.toggle('active'));
+                    }
+                    window.addEventListener('resize', checkResponsiveLayout);
+                    checkResponsiveLayout();
+                })
+                .catch(err => console.error('Header Load Exception:', err));
+
+            fetch('footer.html')
+                .then(response => { if (!response.ok) throw new Error("Footer absent"); return response.text(); })
+                .then(footerHtml => document.getElementById('main-footer').innerHTML = footerHtml)
+                .catch(err => console.error('Footer Load Exception:', err));
+
+
+            // 2. DYNAMIC INPUT DROPDOWN ROUTING LOGIC
+            const mainCategorySelect = document.getElementById('service-category');
+            const subCategoryWrappers = document.querySelectorAll('.sub-category-wrapper');
+            const allSubInputs = document.querySelectorAll('.sub-input');
+
+            mainCategorySelect.addEventListener('change', function() {
+                // Instantly hide all secondary dropdown layers and clear active selections
+                subCategoryWrappers.forEach(wrapper => wrapper.style.display = 'none');
+                allSubInputs.forEach(input => {
+                    input.selectedIndex = 0;
+                    input.removeAttribute('required');
+                });
+
+                // Dynamically target the selected wrapper layer
+                const selectedValue = this.value;
+                let targetWrapperId = '';
+
+                if (selectedValue === 'Fashion Services') targetWrapperId = 'wrapper-fashion';
+                else if (selectedValue === 'Catering Services') targetWrapperId = 'wrapper-catering';
+                else if (selectedValue === 'Mentorship Services') targetWrapperId = 'wrapper-mentorship';
+                else if (selectedValue === 'Partnership Services') targetWrapperId = 'wrapper-partnership';
+
+                if (targetWrapperId) {
+                    const targetWrapper = document.getElementById(targetWrapperId);
+                    targetWrapper.style.display = 'block';
+                    // Force input mapping constraint verification
+                    targetWrapper.querySelector('.sub-input').setAttribute('required', 'true');
+                }
+            });
+
+
+            // 3. WHATSAPP ENGINE ENCODING PROCESSING STRIP
+            const orderForm = document.getElementById('eprel-order-form');
+            
+            orderForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Stop native postbacks execution
+
+                const categoryValue = mainCategorySelect.value;
+                let preferenceValue = '';
+
+                // Capture the exact sub-dropdown input that is currently interactive
+                if (categoryValue === 'Fashion Services') preferenceValue = document.getElementById('sub-fashion').value;
+                else if (categoryValue === 'Catering Services') preferenceValue = document.getElementById('sub-catering').value;
+                else if (categoryValue === 'Mentorship Services') preferenceValue = document.getElementById('sub-mentorship').value;
+                else if (categoryValue === 'Partnership Services') preferenceValue = document.getElementById('sub-partnership').value;
+
+                // Enforce exact message formatting mapping schema matching specs
+                const rawMessageString = `Category: ${categoryValue}\nPreference: ${preferenceValue}`;
+                
+                // Process parameters into a safe, secure global URL syntax payload
+                const encodedMessage = encodeURIComponent(rawMessageString);
+                const targetWhatsAppNumber = '2348060838387'; // Absolute international routing syntax
+                
+                const destinationEndpointUrl = `https://wa.me/${targetWhatsAppNumber}?text=${encodedMessage}`;
+
+                // Redirect client context cleanly onto messaging application runtime engine
+                window.open(destinationEndpointUrl, '_blank');
+            });
+
+        });
+    </script>
+</body>
+  </html>
