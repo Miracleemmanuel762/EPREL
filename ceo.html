@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The CEO | EPREL Services Nigeria Ltd.</title>
+    <style>
+        /* ========================================================
+           EPREL BRAND DESIGN SYSTEM
+           Primary Hue: Deep Royal Purple (#3b174e)
+           Accent Highlights: Metallic Gold (#d4af37)
+           Canvas Base: Soft Silk White (#fcfbfa)
+        ======================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #fcfbfa;
+            color: #2b2b2b;
+            width: 100%;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* 1. INTRO BANNER HERO STRIP */
+        .page-intro-banner {
+            width: 100%;
+            background: linear-gradient(rgba(59, 23, 78, 0.9), rgba(23, 9, 31, 0.95)), 
+                        url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200') no-repeat center center/cover;
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        .intro-title {
+            color: #f5f0e1;
+            font-size: 38px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .intro-subtitle {
+            color: #d4af37;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: sans-serif;
+        }
+
+        /* 2. EXECUTIVE LAYOUT FRAMEWORK */
+        .ceo-profile-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 60px;
+        }
+
+        /* Column 1: Portrait & Badging */
+        .ceo-portrait-pane {
+            flex: 1;
+            position: sticky;
+            top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .portrait-frame {
+            width: 100%;
+            max-width: 380px;
+            height: 480px;
+            border: 3px solid #d4af37;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(59, 23, 78, 0.15);
+            background-color: #110717;
+        }
+
+        .portrait-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ceo-social-badge {
+            margin-top: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #3b174e;
+            color: #f5f0e1;
+            text-decoration: none;
+            padding: 12px 25px;
+            font-family: sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            border: 1px solid #d4af37;
+            transition: all 0.3s ease;
+        }
+
+        .ceo-social-badge:hover {
+            background-color: #d4af37;
+            color: #3b174e;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Column 2: Narrative Biography Workspace */
+        .ceo-biography-pane {
+            flex: 1.4;
+        }
+
+        .executive-header {
+            margin-bottom: 30px;
+        }
+
+        .executive-title {
+            color: #3b174e;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 5px;
+        }
+
+        .executive-post {
+            color: #d4af37;
+            font-family: sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .bio-block-quote {
+            font-size: 20px;
+            font-style: italic;
+            color: #4a3459;
+            border-left: 4px solid #d4af37;
+            padding-left: 20px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .bio-narrative-text {
+            font-family: sans-serif;
+            font-size: 16px;
+            color: #444;
+            text-align: justify;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        /* Executive Milestones List */
+        .milestone-highlights {
+            list-style: none;
+            margin-top: 35px;
+            padding: 25px;
+            background-color: #ffffff;
+            border: 1px solid rgba(59, 23, 78, 0.05);
+            border-radius: 6px;
+        }
+
+        .milestone-highlights h4 {
+            color: #3b174e;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .milestone-highlights li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            font-family: sans-serif;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .milestone-highlights li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+        }
+
+        /* ========================================================
+           RESPONSIVE SAFETY VIEWPORT CONFIGURATIONS
+        ======================================================== */
+        @media (max-width: 992px) {
+            .ceo-profile-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+                padding: 40px 20px;
+            }
+            .ceo-portrait-pane {
+                position: relative;
+                top: 0;
+                width: 100%;
+            }
+            .portrait-frame {
+                max-width: 320px;
+                height: 400px;
+            }
+            .executive-title { font-size: 28px; }
+            .intro-title { font-size: 28px; }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="main-header"></div>
+
+
+    <section class="page-intro-banner">
+        <h1 class="intro-title">Executive Leadership</h1>
+        <p class="intro-subtitle">The Visionary Behind EPREL Services Nigeria Ltd.</p>
+    </section>
+
+
+    <main class="ceo-profile-container">
+
+        <div class="ceo-portrait-pane">
+            <div class="portrait-frame">
+                <img src="https://i.postimg.cc/Qd3gY6F1/Mummy-B.jpg" alt="Mrs. Blessing Okpokwasili-Lebechukwu">
+            </div>
+            <a href="https://www.facebook.com/blessing.okpokwasili.lebechukwu/" target="_blank" class="ceo-social-badge">
+                🌐 Connect on Facebook
+            </a>
+        </div>
+
+        <div class="ceo-biography-pane">
+            
+            <div class="executive-header">
+                <h2 class="executive-title">Mrs. Blessing Okpokwasili-Lebechukwu</h2>
+                <span class="executive-post">Founder & Chief Executive Officer</span>
+            </div>
+
+            <p class="bio-block-quote">
+                "True luxury is found in structural integrity, immaculate finishing, and an unwavering commitment to serving our clients with absolute elite excellence."
+            </p>
+
+            <p class="bio-narrative-text">
+                Mrs. Blessing Okpokwasili-Lebechukwu is a distinguished and widely respected executive designer, structural couturier, and entrepreneur. As the primary driving force behind <strong>EPREL Services Nigeria Ltd.</strong>, she has established a premium brand celebrated for its high-end artistry, complex fabric manipulations, and luxury bespoke tailoring solutions across Nigeria.
+            </p>
+
+            <p class="bio-narrative-text">
+                With deep foundational expertise in couture architecture and custom wedding dress styling, Mrs. Blessing has built a reputation for handling high-profile ceremonial garments, luxury Aso-Ebi coordination, and precision native attire. Her vision ensures that every production item leaving our facility matches rigorous premium quality guidelines and structured layouts.
+            </p>
+
+            <p class="bio-narrative-text">
+                Beyond fashion excellence, her executive leadership guides the operations of EPREL Services, driving the business towards rapid fulfillment standards, community impact through mentorship training, and strategic corporate partnerships.
+            </p>
+
+            <div class="milestone-highlights">
+                <h4>Signature Focal Points</h4>
+                <ul>
+                    <li>Specialist in custom bridal patterns, luxury crystal beadworks, and tailored corsetry.</li>
+                    <li>Overseer of bulk corporate group styling and luxury uniform coordination contracts.</li>
+                    <li>Committed to providing premium customer service experiences with our 1 to 3 days delivery timeline.</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <div id="main-footer"></div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // 1. AUTOMATED MASTER HEADER ASSET LOADER
+            fetch('header.html')
+                .then(response => { if (!response.ok) throw new Error("Header load failed"); return response.text(); })
+                .then(headerHtmlData => {
+                    document.getElementById('main-header').innerHTML = headerHtmlData;
+                    
+                    // Activate Mobile Responsive Menu Toggle Events instantly
+                    const mobileToggle = document.getElementById('mobile-menu-toggle');
+                    const mainNav = document.getElementById('main-nav');
+                    const mobileLinks = document.querySelectorAll('.mobile-only-link');
+
+                    function checkResponsiveLayout() {
+                        if (window.innerWidth <= 992) {
+                            if(mobileLinks) mobileLinks.forEach(link => link.style.display = "block");
+                        } else {
+                            if(mobileLinks) mobileLinks.forEach(link => link.style.display = "none");
+                            if(mainNav) mainNav.classList.remove('active');
+                        }
+                    }
+
+                    if(mobileToggle && mainNav) {
+                        mobileToggle.addEventListener('click', () => mainNav.classList.toggle('active'));
+                    }
+
+                    window.addEventListener('resize', checkResponsiveLayout);
+                    checkResponsiveLayout(); 
+                })
+                .catch(err => console.error('Error handling header dynamic injection:', err));
+
+
+            // 2. AUTOMATED MASTER FOOTER ASSET LOADER
+            fetch('footer.html')
+                .then(response => { if (!response.ok) throw new Error("Footer load failed"); return response.text(); })
+                .then(footerHtmlData => {
+                    document.getElementById('main-footer').innerHTML = footerHtmlData;
+                })
+                .catch(err => console.error('Error handling footer dynamic injection:', err));
+
+        });
+    </script>
+</body>
+</html>
