@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EPREL Services Nigeria Ltd. | Luxury Fashion, Bridal .</title> <style> 
-   
+    <title>EPREL Services Nigeria Ltd. | Luxury Fashion & Bridal</title>
+    <style>
         /* ========================================================
            EPREL FASHION COMPONENT BRANDING
            Primary Elegance: Deep Royal Purple (#3b174e)
@@ -170,7 +171,8 @@
             justify-content: center;
             text-align: center;
             padding: 40px 20px;
-            border-bottom: 4px solid #d4af37;max-width:1200px;
+            border-bottom: 4px solid #d4af37;
+            max-width: 1200px;
         }
 
         .hero-content { max-width: 800px; width: 100%; }
@@ -325,7 +327,7 @@
             <span class="hero-badge">Welcome to Pure Luxury & Elegance</span>
             <h1 class="hero-title">EPREL SERVICES NIGERIA LTD.</h1>
             <p class="hero-description">
-                Redefining premium bespoke tailoring, high-fashion styles, elegant bridal garments, and five-star culinary catering services for your milestones.
+                Redefining premium bespoke tailoring, high-fashion styles, and elegant bridal garments for your milestones.
             </p>
             <div class="hero-btn-group">
                 <a href="order.html" class="btn-primary">Place An Order</a>
@@ -363,18 +365,6 @@
                     <a href="order.html" class="btn-primary" style="padding: 8px 20px; font-size: 11px;">View Portfolio</a>
                 </div>
             </div>
-
-            <div class="service-card">
-                <div class="service-img-frame">
-                    <img src="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=600" alt="Premium Food Catering">
-                </div>
-                <div class="service-details">
-                    <span class="service-tag">Chizzy Bites Catering</span>
-                    <h3 class="service-name">Elite Catering & Foods</h3>
-                    <p class="service-text">Professional catering services providing continental dishes, traditional delicacies, and luxury pastries for weddings and corporate events.</p>
-                    <a href="order.html" class="btn-primary" style="padding: 8px 20px; font-size: 11px;">Book Catering</a>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -390,10 +380,6 @@
             <div class="showcase-item">
                 <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=500" alt="Luxury Dinner Dress">
                 <div class="showcase-overlay"><h4>Evening Gowns</h4></div>
-            </div>
-            <div class="showcase-item">
-                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=500" alt="Gourmet Food Catering Display">
-                <div class="showcase-overlay"><h4>Exquisite Event Catering</h4></div>
             </div>
         </div>
     </section>
@@ -429,19 +415,22 @@
 
         window.addEventListener('resize', checkResponsiveLayout);
         window.addEventListener('load', checkResponsiveLayout);
-   // Automatically fetches and displays the footer across pages
-fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('main-footer').innerHTML = data;
-    })
-    .catch(err => console.error('Error handling footer component loading execution:', err));
-    // Automatically fetches and displays the footer across pages
-fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('main-header').innerHTML = data;
-    })
-    .catch(err => console.error('Error handling header component loading execution:', err));</script>
+
+        // Automatically fetches and displays the footer across pages
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('main-footer').innerHTML = data;
+            })
+            .catch(err => console.error('Error handling footer component loading execution:', err));
+
+        // Automatically fetches and displays the header across pages
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('main-header').innerHTML = data;
+            })
+            .catch(err => console.error('Error handling header component loading execution:', err));
+    </script>
 </body>
-</html>
+    </html>
